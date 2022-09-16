@@ -19,32 +19,38 @@ class LikeButton extends React.Component {
 
     return (
       <button onClick={this.handleOnClick}>
-        Like <Hello />
+        Like
       </button>
     );
   }
 }
 
-function Container() {
-  return (
-    <main id="main-container">
-      Container
-      <LikeButton />
-      <Hello></Hello>
-    </main>
-  );
+function Header() {
+  return <h2>Section with list</h2>;
 }
 
-function Hello() {
-  return <span>Hello</span>;
+function Section() {
+
+  return (
+  <section>
+    <Header/>
+    <ul>
+      <li>One</li>
+      <li>Doi</li>
+      <li>Three</li>
+      <li><LikeButton/></li>
+    </ul>
+  </section>
+  );
 }
 
 function App() {
   return (
     <div>
-      <h1>My Website</h1>
-      <LikeButton></LikeButton>
-      <Container></Container>
+      <h1>Hello to my Website</h1>
+      <LikeButton />
+      <Section />
+      <Section />
     </div>
   );
 }
