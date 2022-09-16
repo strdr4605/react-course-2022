@@ -42,3 +42,8 @@ function App() {
 Your app should look close to this
 
 https://user-images.githubusercontent.com/16056918/190620578-48b26ada-d166-4545-85f9-48822182831b.mov
+
+## Useful link
+
+- https://reactjs.org/docs/create-a-new-react-app.html
+- https://reactjs.org/docs/components-and-props.html
