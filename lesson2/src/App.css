@@ -1,14 +1,12 @@
 body {
   color: white;
-}
-.app {
-  background-color: red;
+  background-color: black;
 }
 
-.blue {
+#s1 {
   background-color: blue;
 }
 
-.green {
+#s2 {
   background-color: green;
 }
