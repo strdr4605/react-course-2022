@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const ThemeCheckbox = () => {
+export const ThemeCheckbox = ({name}) => {
     const [checked, setChecked] = useState(false);
 
     const onChange = (event) => {
@@ -20,7 +20,7 @@ export const ThemeCheckbox = () => {
         <div>
             <input type='checkbox' checked={checked} onChange={onChange} />: Enable dark mode
             <br />
-            Theme is: {checked ? 'dark' : 'light'}
+            Hey, {name} the theme is: {checked ? 'dark' : 'light'}
         </div>
     );
 }

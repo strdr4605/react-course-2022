@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const NameInput = () => {
-    // useState is used for having a state in app that may change
-    const [name, setName] = useState('Person');
+const NameInput = ({name, setName}) => {
 
     const onChange = (event) => {
         const inputValue = event.target.value;
