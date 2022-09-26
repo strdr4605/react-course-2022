@@ -10,7 +10,7 @@ const NameInput = () => {
 
     return (
         <div>
-            <h2>Hello, {name}</h2>
+            <h2>Hello, {name.length === 0 ? 'John' : name}</h2>
             <input 
                 placeholder='Please enter your name' 
                 onChange={onChange} 
