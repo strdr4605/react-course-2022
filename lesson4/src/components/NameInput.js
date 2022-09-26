@@ -5,12 +5,17 @@ const NameInput = () => {
     const [name, setName] = useState('Person');
 
     const onChange = (event) => {
-        setName(event.target.value)
+        const inputValue = event.target.value;
+        if (inputValue.length > 0) {
+            setName(event.target.value)
+        } else {
+            setName('Person');
+        }
     }
 
     return (
         <div>
-            <h2>Hello, {name.length === 0 ? 'John' : name}</h2>
+            <h2>Hello, {name}</h2>
             <input 
                 placeholder='Please enter your name' 
                 onChange={onChange} 
