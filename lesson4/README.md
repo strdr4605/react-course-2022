@@ -1,6 +1,11 @@
-# Getting Started with Create React App
+# Lesson 4
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+```bash
+npx create-react-app lesson4
+cd lesson2
+```
 
 ## Available Scripts
 
@@ -11,60 +16,40 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Homework
 
-### `npm test`
+Create a react app with following components: `<App />`, `<InputWithClean />`, `<AlertButton />`:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+There should be 2 state, one for name and one for surname. 
+User should see 2 `InputWithClean` components with coresponding `placeholder` and clean button.
+When pressing a clean button the input value(state) for coresponding field should be cleaned.
+When pressing `AlertButton` there should be an alert with name and surname; and the input values should be cleaned after.
 
-### `npm run build`
+Your `App` component should look like:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```js
+function App() {
+  // first state
+  // second state
+  
+  // maybe some help functions to pass to children as props
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  return (
+    <div className="App">
+      <h1>Lesson4</h1>
+      <InputWithClean {/* some props here */}/>
+      <InputWithClean {/* some props here */}/>
+      <AlertButton {/* some props here */}/>
+    </div>
+  );
+}
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
 
-### `npm run eject`
+### Homework final result
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+https://user-images.githubusercontent.com/16056918/192537667-983421d6-cfdd-4efb-bf6d-2e8f6b0f4d7d.mov
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Links
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- https://reactjs.org/docs/hooks-state.html
