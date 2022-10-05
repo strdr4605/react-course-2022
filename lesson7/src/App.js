@@ -10,13 +10,18 @@ function App() {
   const [userId, setUserId] = useState(1);
 
   useEffect(() => {
+    if (userId.length === 0) {
+      setUser(undefined);
+      return;
+    }
+
     async function getUser() {
       try {
       const response = await axios.get(`https://reqres.in/api/users/${userId}`);
-      console.log(response);
+      // console.log(response);
       setUser(response.data.data);
       } catch (error) {
-        console.log({error});
+        // console.log({error});
         setUser(undefined);
       }
     }
@@ -25,7 +30,7 @@ function App() {
   }, [userId]);
 
   function onInputChange(newValue) {
-    console.log('value from input ', newValue);
+    // console.log('value from input ', newValue);
     setUserId(newValue);
   }
   

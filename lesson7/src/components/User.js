@@ -1,13 +1,33 @@
 import './User.css'
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Paper from '@mui/material/Paper';
+import Typography from '@mui/material/Typography';
 
 export default function User({user}) {
   return user === undefined ? (
-    <div>No user</div>
+    <Paper sx={{ maxWidth: 'fit-content', padding: 1 }}>
+      <Typography gutterBottom variant="h5" component="div">
+        No user
+      </Typography>
+    </Paper>
   ) : (
-    <div className="user-container">
-      <p className="user-first-name">{user.first_name}</p>
-      <p>{user.email}</p>
-      <img src={user.avatar} />
-    </div>
+    <Card sx={{ maxWidth: 'fit-content' }}>
+      <CardMedia
+          component="img"
+          height="140"
+          image={user.avatar}
+          alt={user.email}
+        />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+          {user.first_name}
+        </Typography>
+        <Typography gutterBottom variant="h5" component="div">
+          {user.email}
+        </Typography>
+      </CardContent>
+    </Card>
   );
 }

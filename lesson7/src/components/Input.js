@@ -11,7 +11,7 @@ export default function Input({value, onChange, label}) {
             noValidate
             autoComplete="off"
         >
-            <TextField label={label} variant="outlined" value={value} onChange={(event) => onChange(event.target.value)} />
+            <TextField type="number" label={label} variant="outlined" value={value} onChange={(event) => onChange(event.target.value)} />
         </Box>
     );
 }
