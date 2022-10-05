@@ -8,11 +8,13 @@ function App() {
   const [user, setUser] = useState(undefined)
 
   useEffect(() => {
-    axios.get('https://reqres.in/api/users/5')
-      .then(response => {
-        console.log({response})
-        setUser(response.data.data)
-      });
+    async function getUser() {
+      const response = await axios.get('https://reqres.in/api/users/5');
+      console.log(response);
+      setUser(response.data.data);
+    }
+    
+    getUser();
   }, []);
   
   return (
