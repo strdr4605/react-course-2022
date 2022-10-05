@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import axios from 'axios';
+
 import './App.css';
 import User from './components/User';
 
@@ -6,12 +8,11 @@ function App() {
   const [user, setUser] = useState(undefined)
 
   useEffect(() => {
-    fetch('https://reqres.in/api/users/5')
-      .then(response => response.json())
-      .then(userFromAPI => {
-        console.log({userFromAPI})
-        setUser(userFromAPI.data)
-      })
+    axios.get('https://reqres.in/api/users/5')
+      .then(response => {
+        console.log({response})
+        setUser(response.data.data)
+      });
   }, []);
   
   return (
