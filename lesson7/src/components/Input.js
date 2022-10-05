@@ -1,8 +1,17 @@
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+
 export default function Input({value, onChange, label}) {
     return (
-        <label>
-            {label}
-            <input  type="number" value={value} onChange={(event) => onChange(event.target.value)}/>
-        </label>
+        <Box
+            component="form"
+            sx={{
+                '& > :not(style)': { m: 1, width: '25ch' },
+            }}
+            noValidate
+            autoComplete="off"
+        >
+            <TextField label={label} variant="outlined" value={value} onChange={(event) => onChange(event.target.value)} />
+        </Box>
     );
 }
