@@ -4,6 +4,7 @@ import User from './components/User';
 import Input from './components/Input';
 
 import './App.css';
+import Users from './components/Users';
 
 function App() {
   const [user, setUser] = useState(undefined);
@@ -39,6 +40,7 @@ function App() {
       <h1>Lesson 7</h1>
       <Input label="Enter user Id" value={userId} onChange={onInputChange} />
       <User user={user} />
+      <Users />
     </div>
   );
 }

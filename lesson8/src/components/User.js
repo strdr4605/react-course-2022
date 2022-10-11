@@ -13,7 +13,7 @@ export default function User({user}) {
       </Typography>
     </Paper>
   ) : (
-    <Card sx={{ maxWidth: 'fit-content' }}>
+    <Card sx={{ width: '350px' }}>
       <CardMedia
           component="img"
           height="140"
